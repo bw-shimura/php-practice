@@ -1,11 +1,23 @@
 <?php
 // Q1 変数と文字列
+$name = '志村';
+echo '私の名前は「'. $name . '」です。';
 
 
 // Q2 四則演算
+$num = 5 * 4;
+var_dump($num);
 
+$x = $num / 2;
+var_dump($x);
 
 // Q3 日付操作
+$currentTimestamp = time();
+
+$time = date("Y-m-d H:i:s",$currentTimestamp);
+
+echo '現在の時刻は、'.$time.'です。'
+
 
 
 // Q4 条件分岐-1 if文
