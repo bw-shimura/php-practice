@@ -16,12 +16,21 @@ $currentTimestamp = time();
 
 $time = date("Y-m-d H:i:s",$currentTimestamp);
 
-echo '現在の時刻は、'.$time.'です。'
+echo '現在の時刻は、'.$time.'です。';
 
 
 
 // Q4 条件分岐-1 if文
+$device = 'pc';
 
+if($device == 'windows'){
+  echo '使用OSは、windowsです。';
+} else
+if ($device == 'mac'){
+  echo '使用OSは、macです。';
+}else{
+  echo 'どちらでもありません。';
+}
 
 // Q5 条件分岐-2 三項演算子
 
