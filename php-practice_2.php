@@ -31,7 +31,7 @@ $personalInfos = [
     ],
 ];
 
-var_dump($personalInfos)
+var_dump($personalInfos);
 
 //問題１　配列を用いて文字列出力
 echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。';
@@ -48,9 +48,40 @@ foreach ($personalInfos as $index => $person){
   $personalInfos[$index]['age'] = $ageList[$index];
 }
 
-var_dump($personalInfos)
+var_dump($personalInfos);
 
 // Q3 オブジェクト-1
+//条件
+//studentIdプロパティは正の整数を設定
+//nameプロパティは任意の値を設定
+
+class Student
+{
+
+  //プロパティ
+    public $studentId;
+    public $studentName;
+
+  //メソッド
+    public function __construct($id, $name)
+    {
+        $this->studentId = $id;
+        $this->studentName = $name;
+    }
+
+    public function attend()
+    {
+        echo '授業に出席しました。';
+    }
+}
+
+//インスタンス
+$kimura = new Student(23,'木村');
+
+//文字列出力
+echo '学籍番号' . $kimura -> studentId . '番の生徒は' . $kimura -> studentName . 'です。';
+
+
 
 
 // Q4 オブジェクト-2
