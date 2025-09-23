@@ -69,9 +69,9 @@ class Student
         $this->studentName = $name;
     }
 
-    public function attend()
+    public function attend($lesson)
     {
-        echo '授業に出席しました。';
+        echo  $this->studentName . 'は'. $lesson .'の授業に参加しました。学籍番号：' . $this->studentId;
     }
 }
 
@@ -82,10 +82,23 @@ $kimura = new Student(23,'木村');
 echo '学籍番号' . $kimura -> studentId . '番の生徒は' . $kimura -> studentName . 'です。';
 
 
-
-
 // Q4 オブジェクト-2
-
+$kimura -> attend('PHP');
 
 // Q5 定義済みクラス
+//問題１　1か月前の日付を表すDateTimeインスタンスを作成し、出力
+$day = new DateTime();
+
+$day ->modify('-1 month');
+
+echo $day->format('Y-m-d');
+
+//問題２　今日の日付と1992年4月25日の日付計算して総日数を出力
+$today = new DateTime();
+
+$day2 = new DateTime('1992-04-25');
+
+$diff = $today->diff($day2);
+
+echo 'あの日から' . $diff->days . '日経過しました。';
 ?>
