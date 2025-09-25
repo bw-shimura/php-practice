@@ -25,11 +25,8 @@ $device = 'pc';
 
 if($device == 'windows'){
   echo '使用OSは、windowsです。';
-} else
-if ($device == 'mac'){
-  echo '使用OSは、macです。';
-}else{
-  echo 'どちらでもありません。';
+} else{
+  echo ($device == 'mac') ? '使用OSは、macです。' : 'どちらでもありません。';
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -61,12 +58,13 @@ foreach ($kname as $city => $cname){
 }
 
 // Q9 連想配列-3
-$kname['宮城県']='';
-$kname['愛知県']='';
+$kname['宮城県']='仙台市';
+$kname['愛知県']='名古屋市';
+
 
 foreach ($kname as $city => $cname){
 
-  if (!empty($cname)){
+  if (in_array($city,$prefecture)){
     echo $city . 'の県庁所在地は、'. $cname. 'です。'."\n";
   }else{
     echo $city . 'は関東地方ではありません。'."\n";
