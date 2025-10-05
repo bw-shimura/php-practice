@@ -37,8 +37,10 @@ var_dump($personalInfos);
 echo $personalInfos[1]['name'] . 'の電話番号は' . $personalInfos[1]['tel'] . 'です。';
 
 //問題２　foreachを用いて文字列出力
+$count =1;
 foreach ($personalInfos as $person){
-  echo '1番目の' . $person['name'] . 'のメールアドレスは' . $person['mail'] . 'で、電話番号は' . $person['tel'] . 'です。' . "\n";
+  echo $count . '番目の' . $person['name'] . 'のメールアドレスは' . $person['mail'] . 'で、電話番号は' . $person['tel'] . 'です。' . "\n";
+  $count++;
 }
 
 //問題３　$ageListを使用して$personalinfosに age というKeyに対して$ageListのそれぞれの年齢をValueとして追加

@@ -73,11 +73,11 @@ foreach ($kname as $city => $cname){
 
 // Q10 関数-1
 function hello($names){
-  echo $names.'こんにちは。';
+  return $names.'、こんにちは。';
 }
 
-hello('二宮さん');
-hello('工藤さん');
+echo hello('二宮さん');
+echo hello('工藤さん');
 
 // Q11 関数-2
 function calcTaxInPrice($price){
